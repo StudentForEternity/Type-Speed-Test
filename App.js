@@ -43,7 +43,8 @@ function App() {
                                      else {
                                          setIsTimeRunning(true)
                                      }}}>Start</button>
-            <h1>Word count: {wordCount}</h1>
+            <h1>Word count: {(isTimeRunning===false && timeRemaining === 0) ?calculateWordCount(text)
+                                                                    : `???`}</h1>
         </div>
     )
 }
